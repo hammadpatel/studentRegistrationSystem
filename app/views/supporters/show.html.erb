@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Supported by:</strong>
+  <%= @supporter.supported_by %>
+</p>
+
+<p>
+  <strong>Supporters firstname:</strong>
+  <%= @supporter.supporters_firstname %>
+</p>
+
+<%= link_to 'Edit', edit_supporter_path(@supporter) %> |
+<%= link_to 'Back', supporters_path %>

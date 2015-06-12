@@ -1,0 +1,75 @@
+<%= form_for(@basicinfo) do |f| %>
+  <% if @basicinfo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@basicinfo.errors.count, "error") %> prohibited this basicinfo from being saved:</h2>
+
+      <ul>
+      <% @basicinfo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :date_of_birth %><br>
+    <%= f.text_area :date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :place_of_birth %><br>
+    <%= f.text_area :place_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :nationality %><br>
+    <%= f.text_area :nationality %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_area :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone_res %><br>
+    <%= f.text_area :telephone_res %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone_off %><br>
+    <%= f.text_area :telephone_off %>
+  </div>
+  <div class="field">
+    <%= f.label :cell_no %><br>
+    <%= f.text_area :cell_no %>
+  </div>
+  <div class="field">
+    <%= f.label :postal_address %><br>
+    <%= f.text_area :postal_address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_area :city %>
+  </div>
+  <div class="field">
+    <%= f.label :fathers_first_name %><br>
+    <%= f.text_area :fathers_first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :fathers_last_name %><br>
+    <%= f.text_area :fathers_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :fathers_nic %><br>
+    <%= f.text_area :fathers_nic %>
+  </div>
+  <div class="field">
+    <%= f.label :fathers_mobile_no %><br>
+    <%= f.text_area :fathers_mobile_no %>
+  </div>
+   <%= f.label :user_id %><br>
+  <%= f.text_area :user_id%>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+

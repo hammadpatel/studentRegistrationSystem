@@ -1,0 +1,65 @@
+<%= form_for(@supporter) do |f| %>
+  <% if @supporter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@supporter.errors.count, "error") %> prohibited this supporter from being saved:</h2>
+
+      <ul>
+      <% @supporter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :supported_by %><br>
+    <%= f.text_field :supported_by %>
+  </div>
+  <div class="field">
+    <%= f.label :supporters_firstname %><br>
+    <%= f.text_field :supporters_firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :supporters_lastname %><br>
+    <%= f.text_field :supporters_lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :relationship_with_applicant %><br>
+    <%= f.text_field :relationship_with_applicant %>
+  </div>
+  <div class="field">
+    <%= f.label :supporter_profession %><br>
+    <%= f.text_field :supporter_profession %>
+  </div>
+  <div class="field">
+    <%= f.label :supporter_designation %><br>
+    <%= f.text_field :supporter_designation %>
+  </div>
+  <div class="field">
+    <%= f.label :supporter_contactno %><br>
+    <%= f.text_field :supporter_contactno %>
+  </div>
+  <div class="field">
+    <%= f.label :supporter_email %><br>
+    <%= f.text_field :supporter_email %>
+  </div>
+  <div class="field">
+    <%= f.label :supporter_cnic %><br>
+    <%= f.text_field :supporter_cnic %>
+  </div>
+  <div class="field">
+    <%= f.label :organization_where_employed %><br>
+    <%= f.text_field :organization_where_employed %>
+  </div>
+  <div class="field">
+    <%= f.label :organization_address %><br>
+    <%= f.text_field :organization_address %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+      

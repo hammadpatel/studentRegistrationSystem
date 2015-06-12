@@ -1,0 +1,39 @@
+<%= form_for(@moreinfo) do |f| %>
+  <% if @moreinfo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@moreinfo.errors.count, "error") %> prohibited this moreinfo from being saved:</h2>
+
+      <ul>
+      <% @moreinfo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Have_you_studied_at_KU_before? %><br>
+    <%= f.text_field :Have_you_studied_at_KU_before? %>
+  </div>
+  <div class="field">
+    <%= f.label :Please_list_all_awards_scholastic_honors_scholarships_publications_activities_and_other_achievements %><br>
+    <%= f.text_field :Please_list_all_awards_scholastic_honors_scholarships_publications_activities_and_other_achievements %>
+  </div>
+  <div class="field">
+    <%= f.label :Extra_curricular_activities_hobbies %><br>
+    <%= f.text_field :Extra_curricular_activities_hobbies %>
+  </div>
+  <div class="field">
+    <%= f.label :Have_you_ever_been_convicted_by_a_court_of_law_or_sentenced_to_a_prison_if_Yes_then_provide_details %><br>
+    <%= f.text_field :Have_you_ever_been_convicted_by_a_court_of_law_or_sentenced_to_a_prison_if_Yes_then_provide_details %>
+  </div>
+  <div class="field">
+    <%= f.label :Have_you_received_psychiatric_treatment_of_any_kind_in_the_past_If_Yes_then_provide_details %><br>
+    <%= f.text_field :Have_you_received_psychiatric_treatment_of_any_kind_in_the_past_If_Yes_then_provide_details %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

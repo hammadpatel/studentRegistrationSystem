@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Basicinfos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alternate email</th>
+      <th>Place of birth</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @basicinfos.each do |basicinfo| %>
+      <tr>
+        <td><%= basicinfo.alternate_email %></td>
+        <td><%= basicinfo.place_of_birth %></td>
+        <td><%= link_to 'Show', basicinfo %></td>
+        <td><%= link_to 'Edit', edit_basicinfo_path(basicinfo) %></td>
+        <td><%= link_to 'Destroy', basicinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Basicinfo', new_basicinfo_path %>

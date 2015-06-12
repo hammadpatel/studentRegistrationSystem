@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Moreinfos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Have you studied at ku before?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @moreinfos.each do |moreinfo| %>
+      <tr>
+        <td><%= moreinfo.Have_you_studied_at_KU_before? %></td>
+        <td><%= link_to 'Show', moreinfo %></td>
+        <td><%= link_to 'Edit', edit_moreinfo_path(moreinfo) %></td>
+        <td><%= link_to 'Destroy', moreinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Moreinfo', new_moreinfo_path %>

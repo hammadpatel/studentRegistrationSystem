@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Have_you_studied_at_KU_before?: MyString
+
+two:
+  Have_you_studied_at_KU_before?: MyString

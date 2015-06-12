@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Supporters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Supported by</th>
+      <th>Supporters firstname</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supporters.each do |supporter| %>
+      <tr>
+        <td><%= supporter.supported_by %></td>
+        <td><%= supporter.supporters_firstname %></td>
+        <td><%= link_to 'Show', supporter %></td>
+        <td><%= link_to 'Edit', edit_supporter_path(supporter) %></td>
+        <td><%= link_to 'Destroy', supporter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supporter', new_supporter_path %>

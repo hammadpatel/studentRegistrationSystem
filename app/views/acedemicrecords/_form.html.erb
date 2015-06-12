@@ -1,0 +1,78 @@
+<%= form_for(@acedemicrecord) do |f| %>
+  <% if @acedemicrecord.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@acedemicrecord.errors.count, "error") %> prohibited this acedemicrecord from being saved:</h2>
+
+      <ul>
+      <% @acedemicrecord.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :matriculation_olevel %><br>
+    <%= f.text_field :matriculation_olevel %>
+  </div>
+  <div class="field">
+    <%= f.label :name_of_school %><br>
+    <%= f.text_field :name_of_school %>
+  </div>
+  <div class="field">
+    <%= f.label :school_name_of_board %><br>
+    <%= f.text_field :school_name_of_board%>
+  </div>
+ <div class="field">
+    <%= f.label :school_year_of_passing %><br>
+    <%= f.text_field :school_year_of_passing%>
+  </div>
+   <div class="field">
+    <%= f.label :school_Discipline %><br>
+    <%= f.text_field :school_Discipline%>
+  </div>
+ <div class="field">
+    <%= f.label :school_Subjects %><br>
+    <%= f.text_field :school_Subjects%>
+  </div>
+ <div class="field">
+    <%= f.label :school_Grades %><br>
+    <%= f.text_field :school_Grades%>
+  </div>
+ <div class="field">
+    <%= f.label :Intermediate_ALevel %><br>
+    <%= f.text_field :Intermediate_ALevel%>
+  </div>
+<div class="field">
+    <%= f.label :name_of_school_College %><br>
+    <%= f.text_field :name_of_school_College %>
+  </div>
+  <div class="field">
+    <%= f.label :college_name_of_board %><br>
+    <%= f.text_field :college_name_of_board%>
+  </div>
+ <div class="field">
+    <%= f.label :college_year_of_passing %><br>
+    <%= f.text_field :college_year_of_passing%>
+  </div>
+   <div class="field">
+    <%= f.label :college_Discipline %><br>
+    <%= f.text_field :college_Discipline%>
+  </div>
+ <div class="field">
+    <%= f.label :college_Subjects %><br>
+    <%= f.text_field :college_Subjects%>
+  </div>
+ <div class="field">
+    <%= f.label :college_Grades %><br>
+    <%= f.text_field :college_Grades%>
+  </div>
+ 
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+ 

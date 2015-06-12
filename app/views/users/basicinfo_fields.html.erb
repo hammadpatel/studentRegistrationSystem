@@ -1,0 +1,33 @@
+
+
+<p>
+<%= f.fields_for :basicinfo do |basicinfo_form| %>
+        <div class="room_category_fields">
+        <div class="field">
+
+        <%= f.label :first_name %>
+        <%= select(:qualifications, :matric_OlevelSubject, [['Science', 1], ['Commerce', 2], ['Medical',3]]) %>
+
+        <%= f.label :matric_OlevelPercentage %>
+        <%= f.text_field :matric_OlevelPercentage %>
+
+        <%= f.label :interSubject %>
+        <%= select(:qualifications, :interSubject, [['Science', 1], ['Commerce', 2], ['Medical',3]]) %>
+
+        <%= f.label :interPercentage %>
+        <%= f.text_field :interPercentage %>
+
+        
+        <% end %>
+      </ul>
+
+
+      <%= f.submit "Apply" %>
+    <% end %>
+  </div>
+
+</p>
+<%= f.fields_for :supporter do |builder| %>
+  <%= render 'supporter_fields', :f => builder %>
+<% end %>
+

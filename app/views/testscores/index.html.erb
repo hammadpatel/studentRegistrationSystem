@@ -1,0 +1,8 @@
+<h3> Listing Results </h3>
+<% @ts.each do |testscore| %>
+	<div>
+	<%= testscore.user.first_name %>
+	<%= testscore.user.last_name %>
+	<%= testscore.test_score %>
+</div>
+<% end %>

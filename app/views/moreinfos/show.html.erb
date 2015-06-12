@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Have you studied at ku before?:</strong>
+  <%= @moreinfo.Have_you_studied_at_KU_before? %>
+</p>
+<p>
+  <strong>Program choice 1:</strong>
+  <%= @user.program_choice1 %>
+</p>
+<p>
+  <strong>Program choice 2:</strong>
+  <%= @user.pprogram_choice2 %>
+</p>
+
+<%= link_to 'Edit', edit_moreinfo_path(@moreinfo) %> |
+<%= link_to 'Back', moreinfos_path %>
+
+
+t.string :program_choice1
+      t.string :pprogram_choice2
+      t.string :first_name
+      t.string :middle_name
+      t.string :last_name
+      t.string :nic
+      t.string :country
+      t.string :test_center
+      

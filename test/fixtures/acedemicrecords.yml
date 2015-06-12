@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  matriculation/olevel: MyString
+  name_of_school/college: MyString
+
+two:
+  matriculation/olevel: MyString
+  name_of_school/college: MyString

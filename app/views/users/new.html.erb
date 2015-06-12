@@ -1,0 +1,86 @@
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <form>
+    <fieldset>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+    <div class="field">
+
+  	<%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    </div>
+
+
+  <div class="field">
+
+    <%= f.label :middle_name %>
+    <%= f.text_field :middle_name %>
+    </div>
+
+  <div class="field">
+
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    </div>
+
+  <div class="field">
+
+    <%= f.label :nic %>
+    <%= f.text_field :nic %>
+    </div>
+
+  <div class="field">
+
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+    </div>
+
+  <div class="field">
+
+    <%= f.label :test_center %>
+    <%= f.text_field :test_center %>
+    </div>
+
+  <div class="field">
+
+    <%= f.label :program_choice1 %>
+    <%= f.text_field :program_choice1 %>
+    </div>
+
+  <div class="field">
+
+    <%= f.label :pprogram_choice2 %>
+    <%= f.text_field :pprogram_choice2 %>
+    </div>
+
+
+
+
+
+
+
+  <div class="actions"><%= f.submit %></div>
+</fieldset>
+</form>
+<% end %>
+
+
